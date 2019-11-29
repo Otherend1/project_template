@@ -1,0 +1,11 @@
+language: python
+# command to install dependencies
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+install:
+  - conda env create -f doc/environment.yml
+# command to run tests
+script:
+  - pytest
