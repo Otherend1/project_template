@@ -1,0 +1,4 @@
+CONTAINER_NAME=iris_app
+PORT=8999
+MODEL_PATH=/extra_data/dumps/iris_svm_model.joblib
+VERSION=0.1

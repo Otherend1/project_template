@@ -1,0 +1,57 @@
+<html>
+<body>
+
+
+<div style="text-align: center;">
+
+    <h2> Demo </h2>
+
+    <div id="input">
+       <div style="height: 300px;"> <br><br><br><br><br> Input </div>
+    </div>
+
+    <br>
+    <form action="" id="irisForm" method="POST">
+   	 <input type="number" id="sepalLength" name="sepalLength" min=0 step=0.01 required>
+	 <input type="number" id="sepalWidth" name="sepalWidth" min=0 step=0.01 required>
+ 	 <input type="number" id="petalLength" name="petalLength" min=0 step=0.01 required>
+ 	 <input type="number" id="petalWidth" name="petalWidth" min=0 step=0.01 required>
+
+         <input type="submit" id="predict" name="submit"></button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    Score: <div id="score"> - </div>
+
+    <br>
+
+</div>
+
+
+<script>
+
+window.addEventListener("load", function () {
+  function sendData() { 
+      var request = new XMLHttpRequest();
+      var formdata = new FormData(form);
+      request.open("POST", "/predict");
+      request.send(formdata);
+      request.onreadystatechange = function () {
+        document.getElementById("score").innerHTML = this.responseText;
+      };
+  }
+  var form = document.getElementById("irisForm");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    sendData();
+  });
+});
+
+</script>
+
+
+</body>
+</html>
