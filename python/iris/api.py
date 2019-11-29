@@ -8,7 +8,7 @@ from iris.settings import settings
 MODEL_PATH = settings["dumps"]["iris_svm_model_path"]
 
 
-class IrisAPI():
+class IrisAPI(object):
     """
     API for score prediction from Iris data. Example.
     Needs to initialize the API through the 'load' method before using it.
@@ -16,6 +16,8 @@ class IrisAPI():
 
     def __init__(self):
         self.loaded = False
+        self.model = None
+        self.model_path = None
 
     def instantiate(self, model_path=MODEL_PATH, force=False):
         """
@@ -33,13 +35,13 @@ class IrisAPI():
             self.model_path = model_path
             self.loaded = True
 
-    def preprocess(self, x):
+    def preprocess(self, x_array):
         """
         Preprocess an array representing the input data.
         """
-        return x
+        return x_array
 
-    def check_preprocess(self, x):
+    def check_preprocess(self, x_array):
         """
         Checks if the size of an array fits the requirements of the model.
         Note that we have no insurance that x corresponds to the exact preprocessing
@@ -56,11 +58,11 @@ class IrisAPI():
             Whether the shape is correct.
         """
 
-        check = x.shape == (4,)
+        check = x_array.shape == (4,)
 
         return check
 
-    def predict(self, x):
+    def predict(self, x_array):
         """
         Predicts score from an iris data loaded as array.
 
@@ -74,5 +76,4 @@ class IrisAPI():
         score: float
         """
 
-        return self.model.predict(np.asarray([x]))[0]
-
+        return self.model.predict(np.asarray([x_array]))[0]
