@@ -22,8 +22,8 @@ install:
   - conda info -a
 
   # Replace with your dependencies
-  - conda env create -n test-environment -f doc/environment.yml
-  - conda activate test-environment
+  - conda env create -n templateenv -f doc/environment.yml
+  - conda activate templateenv
 # command to run tests
 script:
   - pytest

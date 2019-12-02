@@ -1,4 +1,4 @@
-name: deep_gpu
+name: tmp
 channels:
   - conda-forge
   - defaults
@@ -150,11 +150,15 @@ dependencies:
     - keras-applications==1.0.8
     - keras-preprocessing==1.1.0
     - markdown==3.1.1
+    - packaging==19.2
+    - pluggy==0.13.1
     - protobuf==3.8.0
+    - py==1.8.0
+    - pytest==5.3.1
     - tensorboard==1.14.0
     - tensorflow-estimator==1.14.0
     - tensorflow-gpu==1.14.0
     - termcolor==1.1.0
     - werkzeug==0.15.4
-prefix: /home/hdupeux/miniconda3/envs/deep_gpu
+prefix: /home/mremiseaneo/miniconda3/envs/tmp
 
