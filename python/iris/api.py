@@ -75,5 +75,4 @@ class IrisAPI(object):
         -------
         score: float
         """
-        return None
         return self.model.predict(np.asarray([x_array]))[0]
