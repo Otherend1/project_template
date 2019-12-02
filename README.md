@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Otherend1/project_template.svg?branch=master)](https://travis-ci.com/Otherend1/project_template)
+
 This repository contains a generic template for AI team repositories.
 In particular, it gives an example for:
  - having a specific conda environment
