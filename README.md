@@ -81,6 +81,9 @@ git add file.psd
 git commit -m "Add design file"
 git push origin master
 
+pip install -U pytest
+pip install pytest-cov
+
 4) Check code using pylint tool  
 
 5) Commit code using following tags:
