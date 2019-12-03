@@ -3,8 +3,6 @@
     <img src="https://codecov.io/gh/Otherend1/project_template/coverage.svg?branch=master" alt="Codecov" />
 </a>
 
-https://codecov.io/gh/Otherend1/project_template/branch/master/graphs/badge.svg
-
 This repository contains a generic template for AI team repositories.
 In particular, it gives an example for:
  - having a specific conda environment
