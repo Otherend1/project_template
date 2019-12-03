@@ -24,7 +24,12 @@ install:
   # Replace with your dependencies
   - conda env create -n templateenv -f doc/environment.yml
   - conda activate templateenv
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 # command to run tests
 script:
   - pytest
   - pytest --cov ./python/iris/
+after_success:
+  - codecov # submit coverage
