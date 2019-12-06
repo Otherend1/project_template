@@ -68,9 +68,16 @@ docker logs --follow iris_app
 
 You might also want to have a closer look to : docker ps, docker rm, docker stop, docker restart, docker images...
 
+### If your project contains external github projects
+You will need to run this at the init of the repository:
+```bash
+git submodule init
+git submodule update
+```
+
 ### Handle Large files
 If you have big files that you need to store, install Git LFS (large file storage)
-1. Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
+1. Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running: \
 `git lfs install` \
 You'll need to run this in your repository directory, once per repository.
 
