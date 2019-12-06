@@ -11,6 +11,9 @@ In particular, it gives an example for:
  - exposing the models via an API
  - exposing the APIs as a flask webservice
  - exposing the demo application via docker
+ - handle large files storage (like trained models)
+ - handle external github projects
+ - commit conventions
 
 1) Conda environments:
 
