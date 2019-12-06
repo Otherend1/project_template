@@ -71,13 +71,13 @@ You might also want to have a closer look to : docker ps, docker rm, docker stop
 ### Handle Large files
 If you have big files that you need to store, install Git LFS (large file storage)
 1. Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
-`git lfs install`
+`git lfs install` \
 You'll need to run this in your repository directory, once per repository.
 
-2. Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+2. Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime. \
 `git lfs track "*.psd"`
 
-Make sure .gitattributes is tracked
+Make sure .gitattributes is tracked \
 `git add .gitattributes`
 
 3. There is no step three. Just commit and push to GitHub as you normally would.
