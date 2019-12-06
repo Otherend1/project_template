@@ -68,31 +68,26 @@ docker logs --follow iris_app
 
 You might also want to have a closer look to : docker ps, docker rm, docker stop, docker restart, docker images...
 
-
-Install Git LFS to handle big files (large file storage)
-Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
-
-git lfs install
+### Handle Large files
+If you have big files that you need to store, install Git LFS (large file storage)
+1. Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
+`git lfs install`
 You'll need to run this in your repository directory, once per repository.
 
-Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+2. Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+`git lfs track "*.psd"`
 
-git lfs track "*.psd"
 Make sure .gitattributes is tracked
+`git add .gitattributes`
 
-git add .gitattributes
-There is no step three. Just commit and push to GitHub as you normally would.
-
+3. There is no step three. Just commit and push to GitHub as you normally would.
+```bash
 git add file.psd
 git commit -m "Add design file"
 git push origin master
+```
 
-pip install -U pytest
-pip install pytest-cov
-
-4) Check code using pylint tool  
-
-5) Commit code using following tags:
+### Commit best practices:
 - ADD: new feature
 - ENH: enhancement
 - REFAC: refactoring
