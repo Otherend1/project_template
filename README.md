@@ -15,7 +15,7 @@ In particular, it gives an example for:
  - handle external github projects
  - commit conventions
 
-1) Conda environments:
+### Conda environments:
 
 Through the development phase, environments should always be exported as a .yml file:
 ```
@@ -29,7 +29,7 @@ conda env create -n env_name -f doc/environment.yml
 source activate env_name
 ```
 
-2) Creating a python module + exposing the backend:
+### Creating a python module + exposing the backend:
 
 This template python module is based on the iris task.  
 It features a way to secure model architectures, data paths, ..., and provides a way to expose models with a template API + offers the possibility of exposing it to the world with a flask webservice (backend).
@@ -49,7 +49,7 @@ python run_front.py
   
 Once both the backend and the front have been launched, it is possible for a user to access the demo app on the internet via the IP of the host and the port of the front.
 
-3) Docker:
+### Docker:
 
 Usually the demo app shouldn't been launched outside a docker container. The reason is that an app is really dependent on the environment (OS, packages (wget, curl, zip, ...), python environments, ...), the environments should always be secured. Docker allows easy deployment and real time monitoring of the app.
 
